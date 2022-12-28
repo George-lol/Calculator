@@ -5,7 +5,7 @@ x = 0
 
 root = Tk()
 root.geometry('336x525')
-root.resizable(height=True, width=True)
+root.resizable(height=False, width=False)
 
 def addnum(num):
     global x
@@ -27,7 +27,7 @@ def addnum(num):
             x = float(inp.cget('text'))
             inp['text'] = ''
             inp['text'] = inp['text'] + str(num)
-            operation = '**'
+            operation = '****'
             print(x)
         case '/':
             x = float(inp.cget('text'))
@@ -51,7 +51,7 @@ def rav():
             inp['text'] = value + x
         case '--':
             inp['text'] = x - value
-        case '**':
+        case '****':
             inp['text'] = value * x
         case '//':
             inp['text'] = x / value
@@ -59,7 +59,6 @@ def rav():
             inp['text'] = x ** value
 
 def addoper(op):
-    global x
     global operation
     operation = op 
 
